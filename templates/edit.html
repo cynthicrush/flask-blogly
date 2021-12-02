@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='../../static/style.css'>
+  <title>Edit User</title>
+</head>
+<body>
+  <h1>Edit a User</h1>
+  <section class='create-user-form'>
+    <form method='POST' class='info-form'>  
+      <label>First Name
+        <input type='text' name='first-name' value='{{user.first_name}}'>
+      </label>
+      <label>Last Name
+        <input type='text' name='last-name' value='{{user.last_name}}'>
+      </label>
+      <label>Image URL
+        <input type='url' name='image-url' value='{{user.image_url}}'>
+      </label>
+      <a href='/users/{{ user.id }}' class='cancel-btn'>cancel</a>
+      <button type='submit' class='save-btn'>Save</button>
+    </form>
+  </section>
+</body>
+</html>

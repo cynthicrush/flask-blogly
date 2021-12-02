@@ -1,0 +1,76 @@
+* {
+  text-decoration: none;
+}
+
+img {
+  width: 200px;
+  height: 200px
+}
+
+.save-btn {
+  color: white;
+  border: 1px solid rgb(14, 196, 14);
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: rgb(14, 196, 14);
+}
+
+.add-btn {
+  color: white;
+  border: 1px solid rgb(14, 196, 14);
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: rgb(14, 196, 14);
+}
+
+.add-user-btn {
+  color: white;
+  border: 1px solid rgb(61, 61, 61);
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: rgb(61, 61, 61);
+}
+
+.edit-user-btn {
+  color: white;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: blue;
+}
+
+.delete-user-btn {
+  color: white;
+  border: 1px solid rgb(231, 1, 1);
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: rgb(231, 1, 1);
+}
+
+.cancel-btn {
+  color: rgb(0, 162, 255);
+  border: 1px solid rgb(0, 162, 255);
+  border-radius: 3px;
+  padding: 4px 7px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  font-size: 20px;
+  display: block;
+  width: 50%;
+  padding: 8px 20px;
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
+.user {
+  color:rgb(0, 89, 255);
+}
+
+.user:hover {
+  color:rgb(0, 162, 255);
+}
