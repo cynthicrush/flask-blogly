@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogly</title>
+</head>
+<body>
+  <h1>{{post.title}}</h1>
+  <p>{{post.content}}</p>
+  <p>By {{post.user.first_name}} {{post.user.last_name}}</p>
+  <form>
+    <a href='/users/{{ post.user_id }}' class='cancel-btn'>Back</a>
+    <button formaction='/posts/{{ post.id }}/edit' formmethod='GET' class='edit-post-btn'>Edit</button>
+    <button formaction='/posts/{{ post.id }}/delete' formmethod='POST' class='delete-post-btn'>Delete</button>
+  </form>
+</body>
+</html>

@@ -39,6 +39,14 @@ img {
   background-color: blue;
 }
 
+.add-post-btn {
+  color: white;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: blue;
+}
+
 .delete-user-btn {
   color: white;
   border: 1px solid rgb(231, 1, 1);
@@ -72,5 +80,13 @@ input {
 }
 
 .user:hover {
+  color:rgb(0, 162, 255);
+}
+
+.post {
+  color:rgb(0, 89, 255);
+}
+
+.post:hover {
   color:rgb(0, 162, 255);
 }
