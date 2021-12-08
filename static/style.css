@@ -15,7 +15,7 @@ img {
   background-color: rgb(14, 196, 14);
 }
 
-.add-btn {
+.add {
   color: white;
   border: 1px solid rgb(14, 196, 14);
   border-radius: 3px;
@@ -23,15 +23,7 @@ img {
   background-color: rgb(14, 196, 14);
 }
 
-.add-user-btn {
-  color: white;
-  border: 1px solid rgb(61, 61, 61);
-  border-radius: 3px;
-  padding: 5px 8px;
-  background-color: rgb(61, 61, 61);
-}
-
-.edit-user-btn {
+.edit{
   color: white;
   border: 1px solid blue;
   border-radius: 3px;
@@ -39,15 +31,15 @@ img {
   background-color: blue;
 }
 
-.add-post-btn {
+.add-btn {
   color: white;
-  border: 1px solid blue;
+  border: 1px solid rgb(0, 214, 132);
   border-radius: 3px;
   padding: 5px 8px;
-  background-color: blue;
+  background-color: rgb(0, 214, 132);
 }
 
-.delete-user-btn {
+.delete {
   color: white;
   border: 1px solid rgb(231, 1, 1);
   border-radius: 3px;

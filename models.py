@@ -18,6 +18,8 @@ class User(db.Model):
   last_name = db.Column(db.String(), nullable = False)
   image_url = db.Column(db.String(), nullable = False, default='https://upload.wikimedia.org/wikipedia/commons/7/7e/Circle-icons-profile.svg')
 
+  posts = db.relationship("Post", backref="user", cascade="all, delete-orphan")
+
 class Post(db.Model):
   '''Post'''
   __tablename__ = 'posts'
