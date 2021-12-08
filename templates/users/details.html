@@ -16,8 +16,8 @@
       <h1>{{user.first_name}} {{user.last_name}}</h1>
       <form>
         <a href='/users' class='cancel-btn'>Back</a>
-        <button formaction='/users/{{ user.id }}/edit' formmethod='GET' class='edit-user-btn'>Edit</button>
-        <button formaction='/users/{{ user.id }}/delete' formmethod='POST' class='delete-user-btn'>Delete</button>
+        <button formaction='/users/{{ user.id }}/edit' formmethod='GET' class='edit edit-user-btn'>Edit</button>
+        <button formaction='/users/{{ user.id }}/delete' formmethod='POST' class='delete delete-user-btn'>Delete</button>
       </form>
     </div>
     <div class='posts-list'>
@@ -25,11 +25,11 @@
       <ul>
         {% for post in user.posts %}
         <li>
-          <a href='#' class='post'>{{post.title}}</a>
+          <a href='/posts/{{post.id}}' class='post'>{{post.title}}</a>
         </li>
         {% endfor %}
       </ul>
-      <a href='/users/{{ user.id }}/posts/new' class='add-post-btn'>Add Post</a>
+      <a href='/users/{{ user.id }}/posts/new' class='add-btn add-post-btn'>Add Post</a>
     </div>
   </div>
   
