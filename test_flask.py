@@ -36,7 +36,7 @@ class UserViewsTestCase(TestCase):
 
   def test_list_users(self):
     with app.test_client() as client:
-      response = client.get('/')
+      response = client.get('/', follow_redirects=True)
       html = response.get_data(as_text=True)
 
       self.assertEqual(response.status_code, 200)
@@ -52,9 +52,13 @@ class UserViewsTestCase(TestCase):
 
   def test_add_user(self):
     with app.test_client() as client:
-      data = {'first_name': 'TestUserFirstName2', 'last_name': 'TestUserLastName2', 'image_url': 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png'}
-      response = client.get('/users', data=data, follow_redirects=True)
-      pdb.set_trace()
+      data = {'first-name': 'TestUserFirstName2', 'last-name': 'TestUserLastName2', 'image-url': 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png'}
+      
+      post_response = client.post('/users/new', data=data)
+      post_html = post_response.get_data(as_text=True)
+
+      response = client.get('/users', follow_redirects=True)
+
       html = response.get_data(as_text=True)
 
       self.assertEqual(response.status_code, 200)

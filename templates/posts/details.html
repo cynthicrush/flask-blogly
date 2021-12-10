@@ -10,7 +10,12 @@
 <body>
   <h1>{{post.title}}</h1>
   <p>{{post.content}}</p>
-  <p>By {{post.user.first_name}} {{post.user.last_name}}</p>
+  <p>By {{post.user.first_name}} {{post.user.last_name}} on {{post.friendly_date}}</p>
+  <p>Tags:
+    {% for tag in post.tags %}
+    <a href='/tags/{{tag.id}}' class='tag-in-post-details'>{{tag.name}}</span>
+    {% endfor %}
+  </p>
   <form>
     <a href='/users/{{ post.user_id }}' class='cancel-btn'>Back</a>
     <button formaction='/posts/{{ post.id }}/edit' formmethod='GET' class='edit edit-post-btn'>Edit</button>
