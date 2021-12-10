@@ -9,15 +9,18 @@
 </head>
 <body>
   <h1>Edit Post</h1>
-  <section class='create-user-form'>
+  <section class='edit-post-form'>
     <form method='POST' class='info-form'>  
       <label>Title
-        <input type='text' name='title' value='{{post.title}}'>
+        <input type='text' class='text' name='title' value='{{post.title}}'>
       </label>
       <label>Content
-        <input type='text' name='content' value='{{post.content}}'>
+        <input type='text' class='text' name='content' value='{{post.content}}'>
       </label>
-      
+      {% for tag in tags %}
+      <input type="checkbox" id="tag{{tag.id}}" {% if tag in post.tags %}checked{% endif %} name="tags" value="{{tag.id}}">{{tag.name}}
+      <label for="tag{{tag.id}}"> </label><br>
+      {% endfor %}
       <a href='/posts/{{ post.id }}' class='cancel-btn'>cancel</a>
       <button type='submit' class='save-btn'>Save</button>
     </form>

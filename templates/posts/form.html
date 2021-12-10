@@ -12,11 +12,15 @@
   <section class='create-post-form'>
     <form method='POST' class='info-form'>  
       <label>Title
-        <input type='text' name='title'>
+        <input type='text' class='text' name='title'>
       </label>
       <label>Content
-        <input type='text' name='content'>
+        <input type='text' class='text' name='content'>
       </label>
+      {% for tag in tags %}
+      <input type="checkbox" id="tag{{tag.id}}" name="tags" value="{{tag.name}}">{{tag.name}}
+      <label for="tag{{tag.id}}"> </label><br>
+      {% endfor %}
       <a href='/users/{{ user.id }}' class='cancel-btn'>Cancel</a>
       <button type='submit' class='add'>Add</button>
     </form>
