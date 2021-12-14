@@ -13,7 +13,7 @@
   <p>By {{post.user.first_name}} {{post.user.last_name}} on {{post.friendly_date}}</p>
   <p>Tags:
     {% for tag in post.tags %}
-    <a href='/tags/{{tag.id}}' class='tag-in-post-details'>{{tag.name}}</span>
+    <a href='/tags/{{tag.id}}' class='tag-in-post-details'>{{tag.name}}</a>
     {% endfor %}
   </p>
   <form>
